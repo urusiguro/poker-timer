@@ -1,0 +1,15 @@
+set shell := ["bash", "-c"]
+
+# 変数の定義
+js-out := "../js/src/gen"
+js-bin := "../js/node_modules/.bin"
+
+fmt:
+  buf format -w .
+
+gen:
+  rm -f {{js-out}}/*
+  PATH={{js-bin}}:$PATH buf generate
+
+clean:
+  rm -rf {{js-out}}

@@ -7,4 +7,4 @@
 
 ## アーキテクチャ
 - vite + React + TS
-- 
+- just, buf

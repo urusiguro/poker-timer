@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package types;
+
+enum LevelType {
+  LEVEL_TYPE_UNSPECIFIED = 0;
+  LEVEL_TYPE_BLIND = 1;
+  LEVEL_TYPE_BREAK = 2;
+}
+
+message StructureLevel {
+  uint32 duration_seconds = 1;
+  LevelType type = 2;
+  uint32 small_blind = 3;
+  uint32 big_blind = 4;
+  uint32 ante = 5;
+}
